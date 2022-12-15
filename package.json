@@ -1,0 +1,20 @@
+{
+  "name": "blog-website",
+  "version": "1.0.0",
+  "description": "This is a blogging website made using Angular, Node, Express and MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "blog-backend"
+  },
+  "keywords": [
+    "blog",
+    "blogging",
+    "website"
+  ],
+  "author": "Vinit Bansal",
+  "license": "ISC"
+}
