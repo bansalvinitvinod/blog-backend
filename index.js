@@ -1,6 +1,6 @@
 const express = require('express');
 const { Sequelize } = require('sequelize');
-const sequelize = require('./config/database')
+const sequelize = require('./src/configs/db.config')
 
 sequelize.authenticate()
     .then(() => {
