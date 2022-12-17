@@ -1,4 +1,4 @@
-const routesV1 = require('./v1');
+const routesV1 = require('../api/v1/routes');
 const express = require('express');
 const router = express.Router();
 
