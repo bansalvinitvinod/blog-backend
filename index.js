@@ -1,11 +1,13 @@
 const express = require('express');
-const { Sequelize } = require('sequelize');
-const sequelize = require('./src/configs/db.config')
+const db = require('./src/configs/db.config')
 
-sequelize.authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch((error) => {
-        console.error('Unable to connect to the database:', error);
-    });
+const app = express();
+app.use(express.json());
+
+app.get('/', function (req, res) {
+    res.send('App running')
+});
+
+app.listen({port: 3000}, async() =>{
+    console.log("Running");
+});
