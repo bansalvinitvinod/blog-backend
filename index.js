@@ -1,12 +1,10 @@
 const express = require('express');
-const db = require('./src/configs/db.config')
+const routes = require('./src/routes');
 
 const app = express();
-app.use(express.json());
 
-app.get('/', function (req, res) {
-    res.send('App running')
-});
+app.use(express.json());
+app.use('/api', routes);
 
 app.listen({port: 3000}, async() =>{
     console.log("Running");
