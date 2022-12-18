@@ -1,19 +1,19 @@
-const rolesModel = require('../models/roles')
+const models = require('../models')
 
 const getAll = (async () => {
-    return await rolesModel.findAll();
+    return await models.roles.findAll();
 })
 
 const get = (async (id) => {
-    return await rolesModel.findByPk(id);
+    return await models.roles.findByPk(id);
 })
 
 const create = (async (requestBody) => {
-    return await rolesModel.create(requestBody);
+    return await models.roles.create(requestBody);
 })
 
 const update = (async (id, requestBody) => {
-    return await rolesModel.update(requestBody, {
+    return await models.roles.update(requestBody, {
         where: {
             id: id
         }
@@ -21,7 +21,7 @@ const update = (async (id, requestBody) => {
 })
 
 const remove = (async (id) => {
-    return await rolesModel.destroy({
+    return await models.roles.destroy({
         where: {
             id: id
         }
