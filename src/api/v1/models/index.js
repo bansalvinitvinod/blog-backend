@@ -4,6 +4,7 @@ const categoriesModel = require('./categories');
 const commentsModel = require('./comments');
 const permissionsModel = require('./permissions');
 const postsModel = require('./posts');
+const tagsModel = require('./tags');
 
 module.exports ={
     roles: rolesModel,
@@ -11,5 +12,6 @@ module.exports ={
     categories: categoriesModel,
     comments: commentsModel,
     permissions: permissionsModel,
-    posts: postsModel
+    posts: postsModel,
+    tags: tagsModel
 }
