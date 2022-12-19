@@ -3,11 +3,13 @@ const usersModel = require('./users');
 const categoriesModel = require('./categories');
 const commentsModel = require('./comments');
 const permissionsModel = require('./permissions');
+const postsModel = require('./posts');
 
 module.exports ={
     roles: rolesModel,
     users: usersModel,
     categories: categoriesModel,
     comments: commentsModel,
-    permissions: permissionsModel
+    permissions: permissionsModel,
+    posts: postsModel
 }
