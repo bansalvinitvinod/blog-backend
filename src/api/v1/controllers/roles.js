@@ -1,4 +1,5 @@
 const services = require('../services');
+
 const getRoles = (async (req, res) => {
     res.status(200).json(await services.roles.getAll());
 })
