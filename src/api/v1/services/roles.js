@@ -28,10 +28,27 @@ const remove = (async (id) => {
     });
 })
 
+const hasPermission = (async (role, permissionType, permissionFor) => {
+    rolePermission = await models.roles.findOne({
+        where: {
+            role_title: role
+        },
+        include: [{
+            model: models.permissions,
+            where: {
+                type: permissionType,
+                permission_for: permissionFor
+            }
+        }]
+    });
+    return !(null == rolePermission);
+});
+
 module.exports = {
     getAll,
     get,
     create,
     update,
-    remove
+    remove,
+    hasPermission
 }
