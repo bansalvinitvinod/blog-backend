@@ -1,5 +1,7 @@
 const rolesService = require('./roles');
+const usersService = require('./users');
 
 module.exports = {
-    roles: rolesService
+    roles: rolesService,
+    users: usersService
 }
