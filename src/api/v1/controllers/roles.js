@@ -41,18 +41,10 @@ const deleteRole = (async (req, res) => {
     res.status(200).json('Role deleted');
 });
 
-const hasPermission = (async (req, res) => {
-    const role = req.body.role;
-    const permissionType = req.body.permissionType;
-    const permissionFor = req.body.permissionFor;
-    return await services.roles.hasPermission(role, permissionType, permissionFor);
-});
-
 module.exports = {
     getRoles,
     getRole,
     createRole,
     updateRole,
-    deleteRole,
-    hasPermission
+    deleteRole
 }
