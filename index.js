@@ -7,5 +7,5 @@ app.use(express.json());
 app.use('/api', routes);
 
 app.listen({port: 3000}, async() =>{
-    console.log("Running");
+    console.log("Server has been started at http://localhost:3000");
 });
